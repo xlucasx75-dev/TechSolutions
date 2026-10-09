@@ -7,19 +7,33 @@
         <link rel="icon" type="images/png" href="Images/TechSolutions.png">
     </head>
     <body>
-        <nav>
-            <div class="menu">
-                <button class="button-menu"><img class="img-menu" src="images/button_menu.png"><img></button>
-                <div class="menu-content">
-                    <a href="index.html">Accueil</a>
-                    <a href="services.html">Services</a>
-                    <a href="histoire.html">Histoire</a>
-                    <a href="contacts.html">Contacts</a>
+        <section class="section-nav">
+            <nav>
+                <div class="menu">
+                    <button class="button-menu" aria-expanded="false" aria-controls="menu-options"><img class="img-menu" src="images/button_menu.png"><img></button>
+                    <div class="menu-content" id="menu-options">
+                        <a href="index.html">Accueil</a>
+                        <a href="services.html">Services</a>
+                        <a href="histoire.html">Histoire</a>
+                        <a href="contacts.html">Contacts</a>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <button class="button-connexion"><a class="a-connexion" href="login.html">CONNEXION</a></button>
-            </div>
-        </nav>
+                <div>
+                    <a class="button-connexion" href="login.html">CONNEXION</a>
+                </div>
+            </nav>
+        </section>
+
+
+    <script>
+        const boutonMenu = document.querySelector(".button-menu"); /* Recherche 1er Element avec la class .button-menu */
+        const optionsMenu = document.querySelector(".menu-content"); /* Recherche 1er Element avec la class .menu-content */
+
+        boutonMenu.addEventListener("click", function () {
+            const isOpen = optionsMenu.classList.toggle("is-open"); /* Ajoute/Retire class is-open */
+
+            boutonMenu.setAttribute("aria-expanded", String(isOpen));
+        });
+    </script>
     </body>
 </html>

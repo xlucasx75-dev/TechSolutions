@@ -11,9 +11,16 @@ nav {
     margin: 16px;
 }
 
+.section-nav {
+    background-image: url("../Images/banniere.png");
+    background-position: center;
+    padding: 8px;
+}
+
 .menu {
     position: relative;
-    display: inline-block; /* */
+    display: flex; /* */
+    align-items: center;
 }
 
 .button-menu {
@@ -32,12 +39,11 @@ nav {
 
 .menu-content {
     display: none;
-    position: absolute;
+    align-items: center;
     background-color: #f9f9f9;
     min-width: 150px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* x, y, ombre flou*/
     border-radius: 5px;
-    z-index: 1; /* S'affiche au-dessus des autres éléments */
 }
 
 .menu-content a {
@@ -52,8 +58,8 @@ nav {
     background-color: #f1f1f1;
 }
 
-.menu:hover .menu-content {
-  display: block;
+.menu-content.is-open {
+    display: flex;
 }
 
 .img-menu {
@@ -62,6 +68,9 @@ nav {
 
 /* BOUTON "SE CONNECTER" */
 .button-connexion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #3498db;
     border: none;
     border-radius: 10px;
@@ -70,12 +79,13 @@ nav {
     padding: 8px 10px;
     box-sizing: border-box;
     cursor: pointer;
-}
-
-.a-connexion {
     color: black;
     font-family: Verdana;
     font-size: 16px;
 }
 
-/* TITRES DE PAGES */
+/* Index.html */
+
+.section-index-a {
+    background-position: center;
+}
